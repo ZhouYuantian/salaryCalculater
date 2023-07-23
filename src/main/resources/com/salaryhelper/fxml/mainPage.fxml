@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.salaryhelper.controller.MainPageController">
+   <children>
+      <TextField alignment="TOP_CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" text="工时汇总表">
+         <effect>
+            <ColorAdjust brightness="-0.02" contrast="-0.08" saturation="-0.02" />
+         </effect>
+         <VBox.margin>
+            <Insets left="175.0" right="175.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="350.0">
+         <children>
+            <TextField fx:id="tfHourFilePath" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="175.0" promptText="请选择文件">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></TextField>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSelectHourTable" prefHeight="30.0" prefWidth="75.0" text="选择" />
+            <Hyperlink onAction="#onViewWkHrTemplate" prefHeight="28.0" prefWidth="103.0" text="查看样例各式" underline="true" />
+         </children>
+         <VBox.margin>
+            <Insets left="175.0" right="75.0" />
+         </VBox.margin>
+      </HBox>
+      <TextField alignment="TOP_CENTER" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="250.0" text="员工薪酬构成表">
+         <effect>
+            <ColorAdjust brightness="-0.02" contrast="-0.08" saturation="-0.02" />
+         </effect>
+         <VBox.margin>
+            <Insets left="175.0" right="175.0" />
+         </VBox.margin>
+      </TextField>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="350.0">
+         <children>
+            <TextField fx:id="tfRuleFilePath" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="175.0" promptText="请选择文件" />
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onSelectRuleTable" prefHeight="30.0" prefWidth="75.0" text="选择" />
+            <Hyperlink onAction="#onViewRuleTemplate" prefHeight="28.0" prefWidth="103.0" text="查看样例各式" underline="true" />
+         </children>
+         <VBox.margin>
+            <Insets left="175.0" right="75.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="68.0" prefWidth="250.0">
+         <children>
+            <TextField fx:id="tfOutputDirectoryPath" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="154.0" promptText="请选择输出文件夹" />
+            <Button mnemonicParsing="false" onAction="#onSelectOutputDirectory" prefHeight="30.0" prefWidth="141.0" text="选择文件夹" />
+         </children>
+         <VBox.margin>
+            <Insets left="175.0" right="175.0" />
+         </VBox.margin>
+      </HBox>
+      <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onExport" prefHeight="40.0" prefWidth="80.0" text="生成">
+         <VBox.margin>
+            <Insets left="260.0" right="260.0" top="30.0" />
+         </VBox.margin>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="50.0" top="50.0" />
+   </padding>
+</VBox>
